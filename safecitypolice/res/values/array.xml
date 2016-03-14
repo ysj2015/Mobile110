@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="tab_title">
+        <item>当前任务</item>
+        <item>历史任务</item>
+        <item>我的</item>
+    </string-array>
+
+    <string-array name="days">
+        <item>周日</item>
+        <item>周六</item>
+        <item>周五</item>
+        <item>周四</item>
+        <item>周三</item>
+        <item>周二</item>
+        <item>周一</item>
+    </string-array>
+   
+    <string-array name="xingzuo">
+        <item>水瓶座</item>
+        <item>双鱼座</item>
+        <item>白羊座</item>
+        <item>金牛座</item>
+        <item>双子座</item>
+        <item>巨蟹座</item>
+        <item>狮子座</item>
+        <item>处女座</item>
+        <item>天秤座</item>
+        <item>天蝎座</item>
+        <item>射手座</item>
+        <item>摩羯座</item>
+    </string-array>
+
+</resources>

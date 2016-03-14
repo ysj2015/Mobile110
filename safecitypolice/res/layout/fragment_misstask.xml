@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.inforun.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/listView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:cacheColorHint="#00000000"
+        android:divider="@null"
+        android:fadingEdge="none"
+        android:listSelector="#00000000"
+        android:overScrollMode="never" >
+        
+    </com.inforun.pulltorefresh.library.PullToRefreshListView>
+
+
+         <TextView 
+        android:id="@+id/tv_noDate"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:visibility="gone"
+        android:textColor="@color/gray_light"
+        android:textSize="14sp"
+        android:text="亲，暂时还没有可接任务哦！"/>
+
+</RelativeLayout>

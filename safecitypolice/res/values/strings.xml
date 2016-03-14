@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">手机110</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="press_back_again_finish">再按一次退出应用</string>
+    <string name="login">登录</string>
+    <string name="finish">完成</string>
+    <string name="exit">退出登录</string>
+    <string name="register">注册</string>
+    <string name="user_center">个人中心</string>
+    <string name="forget_password">找回密码</string>
+    <string name="input_password">请输入新密码</string>
+    <string name="input_password2">再次确认新密码</string>
+    <string name="input_nickname">请创建您的账户昵称</string>
+    <string name="input_tel_email">请输入您注册的电话或邮箱</string>
+    <string name="input_policeno">请输入警号</string>
+    <string name="input_mobile">请输入手机号码</string>
+    <string name="input_realname">请输入姓名</string>
+    <string name="input_username">请输入用户名</string>
+    <string name="register_xb">请选择您的性别</string>
+    <string name="man">男</string>
+    <string name="woman">女</string>
+    <string name="update_pwd">修改密码</string>
+    <string name="task">任务</string>
+    <string name="datum">联系方式</string>
+    <string name="submit_task">提交任务</string>
+    <string name="w_pwd">忘记密码</string>
+    <string name="name">姓名</string>
+    <string name="sex">性别</string>
+    <string name="age">年龄</string>
+    <string name="old_pwd">原密码</string>
+    <string name="new_pwd">新密码</string>
+    <string name="ok_pwd">确认密码</string>
+    <string name="save">保存</string>
+    <string name="modify">修改</string>
+    <string name="birthday">出生日期</string>
+    <string name="look_nearbypolice">附近警员</string>
+    <string name="alarm_info">报警信息</string>
+    <string name="alarm_user_info">报警人信息</string>
+
+    
+    <string name="parse_error">数据解析失败！</string>
+    <string name="server_error">亲，服务器开小差了！</string>
+    <string name="net_error">亲，网错开小差了！</string>
+
+    <string name="viewpager_indicator">%1$d/%2$d</string>
+    <string name="support">请求支援</string>
+    <string name="support_resource">请填写需要协助的资源</string>
+    <string name="task_finish">任务完成</string>
+    <string name="task_finish_detail">请填写任务完成情况</string>
+</resources>

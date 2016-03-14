@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+	<include 
+	    layout="@layout/actionbar_nav"/>
+    <RelativeLayout
+        android:id="@+id/ll_task"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/task_map"
+            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+			<com.baidu.mapapi.map.MapView
+		        android:id="@+id/map"
+		        android:layout_alignParentTop="true"
+		        android:layout_width="match_parent"
+		        android:layout_height="250dp"/>
+		</RelativeLayout>
+		<FrameLayout
+		    android:id="@+id/task_text"
+		    android:layout_marginTop="5dp"
+		    android:layout_below="@id/task_map"
+		    android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+			<ImageView
+			    android:layout_width="20dp"
+			    android:layout_height="15dp"
+			    android:layout_marginLeft="20dp"
+			    android:background="@drawable/horn"/>
+			<TextView
+			    android:id="@+id/alarm_text"
+			    android:layout_marginLeft="40dp"
+			    android:layout_width="match_parent"
+	            android:layout_height="wrap_content"
+				android:textColor="@color/blue"
+	            android:textSize="15sp"/>
+		</FrameLayout>
+		<RelativeLayout
+		    android:layout_marginBottom="10dp"
+		    android:layout_alignParentBottom="true"
+		    android:background="@drawable/current_bg"
+		    android:layout_width="match_parent"
+		    android:layout_height="140dp">
+			<ImageView
+		        android:layout_marginTop="10dp"
+		        android:layout_marginBottom="10dp"
+		        android:layout_centerHorizontal="true"
+		        android:id="@+id/curr_task_accepted" 
+		        android:background="@drawable/current_button_blue"
+		        android:layout_width="160dp"
+		        android:layout_height="120dp"/>
+		    <ImageView
+		        android:layout_marginTop="10dp"
+		        android:layout_marginBottom="10dp"
+		        android:layout_centerHorizontal="true"
+		        android:id="@+id/curr_task" 
+		        android:src="@drawable/task_icon"
+		        android:layout_width="160dp"
+		        android:layout_height="120dp"/>
+		    <ImageView
+		        android:layout_marginTop="10dp"
+		        android:layout_marginBottom="10dp"
+		        android:layout_centerHorizontal="true"
+		        android:id="@+id/no_task"
+		        android:enabled="false"
+		        android:src="@drawable/current_disabled"
+		        android:layout_width="160dp"
+		        android:layout_height="120dp"/>
+		    <ImageView
+		        android:background="@drawable/nav" 
+		        android:layout_alignParentRight="true"
+		        android:layout_alignParentBottom="true"
+		        android:layout_marginBottom="15dp"
+		        android:layout_marginRight="15dp"
+		        android:id="@+id/navi"
+		        android:layout_width="45dp"
+		        android:layout_height="45dp"/>
+		    <ImageView
+		        android:background="@drawable/nav_disabled" 
+		        android:layout_alignParentRight="true"
+		        android:layout_alignParentBottom="true"
+		        android:layout_marginBottom="15dp"
+		        android:layout_marginRight="15dp"
+		        android:id="@+id/navi_disabled"
+		        android:enabled="false"
+		        android:layout_width="45dp"
+		        android:layout_height="45dp"/>
+		</RelativeLayout>
+        
+
+        
+
+
+    </RelativeLayout>
+</LinearLayout>

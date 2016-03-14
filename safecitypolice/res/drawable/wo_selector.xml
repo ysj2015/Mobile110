@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_pressed="true"><shape>
+            <gradient android:endColor="@color/blue_muen" android:startColor="@color/blue_muen" />
+
+            <stroke android:width="0.1dp" android:color="@color/blue_muen" />
+        </shape></item>
+       <item android:state_pressed="false"><shape>
+            <gradient android:endColor="#ffffff" android:startColor="#ffffff" />
+
+            <stroke android:width="0.1dp" android:color="#ccc" />
+        </shape></item>
+
+</selector><!-- From: file:/D:/SafeCity/SafeCity/SafeCity/src/main/res/drawable/wo_selector.xml -->

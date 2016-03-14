@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+        <RelativeLayout
+		    android:layout_marginTop="10dp"
+		    style="@style/RegisterInputStyle">
+			<ImageView 
+		        android:id="@+id/iv_name"
+		       	style="@style/InputLeftImageStyle"
+		        android:background="@drawable/policename"/>
+			<EditText
+            	android:id="@+id/edt_name"	            
+	            android:layout_toRightOf="@+id/iv_name"
+            	android:layout_width="match_parent"
+	            android:layout_height="50dp"
+	            android:background="@null"
+	            android:hint="请输入姓名"
+	            android:padding="10dp"
+	            android:singleLine="true"
+	            android:textSize="12sp" />
+		</RelativeLayout>
+		<TextView 
+            android:id="@+id/name_hint"
+            android:visibility="invisible"
+            android:text="必须输入中文姓名"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_gravity="right"
+            android:textSize="10sp"
+            android:textColor="@color/red"/>
+		<RelativeLayout
+		    style="@style/RegisterInputStyle">
+		    <ImageView 
+		        android:id="@+id/iv_policeno"
+		       	style="@style/InputLeftImageStyle"
+		        android:background="@drawable/policeno"/>
+	        <EditText
+	            android:id="@+id/edt_policeno"	            
+	            android:layout_toRightOf="@+id/iv_policeno"
+	            android:layout_width="match_parent"
+	            android:layout_height="50dp"
+	            android:background="@null"
+	            android:hint="请输入警号"
+	            android:padding="10dp"
+	            android:singleLine="true"
+	            android:textSize="12sp" />
+	        
+        </RelativeLayout>
+        <TextView 
+	        android:id="@+id/policeno_hint"
+            android:visibility="invisible"
+	        android:text="警号必须是四位数字"
+	        android:layout_height="wrap_content"
+	        android:layout_width="wrap_content"
+	        android:layout_gravity="right"
+	        android:textSize="10sp"
+	        android:textColor="@color/red"/>
+        <RelativeLayout
+		    android:layout_marginTop="10dp"
+		    style="@style/RegisterInputStyle">
+	        <ImageView 
+		        android:id="@+id/iv_mobile"
+		       	style="@style/InputLeftImageStyle"
+		        android:background="@drawable/policemobile"/>
+			<EditText
+	            android:id="@+id/edt_mobile"	            
+	            android:layout_toRightOf="@+id/iv_mobile"
+	            android:layout_width="match_parent"
+	            android:layout_height="50dp"
+	            android:background="@null"
+	            android:hint="请输入手机号码"
+	            android:padding="10dp"
+	            android:singleLine="true"
+	            android:textSize="12sp" />
+		</RelativeLayout>
+		<TextView 
+            android:id="@+id/mobile_hint"
+            android:visibility="invisible"
+            android:text="必须输入有效的手机号码"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_gravity="right"
+            android:textSize="10sp"
+            android:textColor="@color/red"/>
+		
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/register"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/register"
+        android:onClick="register"/>
+
+</LinearLayout>
