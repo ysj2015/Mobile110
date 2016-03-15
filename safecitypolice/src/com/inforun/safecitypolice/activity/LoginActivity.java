@@ -32,6 +32,7 @@ import com.inforun.safecitypolice.request.XRequestManager;
 import com.inforun.safecitypolice.request.XResponse;
 import com.inforun.safecitypolice.utils.StringUtils;
 import com.inforun.safecitypolice.utils.UHelper;
+import com.inforun.safecitypolice.utils.WtService;
 import com.lidroid.xutils.exception.HttpException;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.JsonHttpResponseHandler;
@@ -187,7 +188,9 @@ public class LoginActivity extends BaseActivity implements OnClickListener {
 								policeNo));
 						SessionManager.getInstance().setCookieStore(myCookieStore);
 						startActivity(new Intent(LoginActivity.this,MainActivity.class));
-						startCheckLocationStream();
+						//startCheckLocationStream();
+						Intent service = new Intent(LoginActivity.this, WtService.class);
+						startService(service);
 						finish();
 					} else {
 						Toast.makeText(LoginActivity.this, "登录失败，请检查登录信息", Toast.LENGTH_LONG).show();

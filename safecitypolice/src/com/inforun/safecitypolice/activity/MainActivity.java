@@ -69,8 +69,14 @@ public class MainActivity extends BaseActivity implements OnTabChangeListener{
 	protected void onCreate(Bundle savedInstanceState) {
 		getWindow().requestFeature(Window.FEATURE_ACTION_BAR_OVERLAY);
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
-		initView();
+		if(SessionManager.getInstance().getCookieStore() != null) {
+			setContentView(R.layout.activity_main);
+			initView();
+		} else {
+			Intent in = new Intent(this,LoginActivity.class);
+			startActivity(in);
+			finish();
+		}
 		
 	}
 

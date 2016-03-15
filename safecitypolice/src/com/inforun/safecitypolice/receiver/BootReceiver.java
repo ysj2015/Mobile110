@@ -9,6 +9,7 @@ import com.inforun.safecitypolice.activity.LoginActivity;
 import com.inforun.safecitypolice.activity.MainActivity;
 import com.inforun.safecitypolice.finals.Constants;
 import com.inforun.safecitypolice.request.AsyncHttpManager;
+import com.inforun.safecitypolice.utils.WtService;
 import com.loopj.android.http.JsonHttpResponseHandler;
 import com.loopj.android.http.PersistentCookieStore;
 import com.loopj.android.http.RequestParams;
@@ -63,10 +64,8 @@ public class BootReceiver extends BroadcastReceiver {
 //						mHandler.sendMessage(mHandler.obtainMessage(MSG_SET_ALIAS,
 //								policeNo));
 						SessionManager.getInstance().setCookieStore(myCookieStore);
-						//startActivity(new Intent(LoginActivity.this,MainActivity.class));
-						//context.startService(new Intent(context,LocationService.class));
-						startCheckLocationStream(context);
-						//finish();
+						Intent service = new Intent(context, WtService.class);
+						context.startService(service);
 					}
 				}
 				catch(Exception e) {
