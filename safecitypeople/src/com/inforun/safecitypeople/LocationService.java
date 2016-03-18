@@ -65,7 +65,7 @@ public class LocationService extends Service implements BDLocationListener{
 
 		HashMap<String, Object> map = new HashMap<String, Object>();
 		map.put("x", x);
-		map.put("y", y-0.04);
+		map.put("y", y);
 		final XRequestManager manager = new XRequestManager(this);
 //		manager.getSessionId();
 		manager.setProgressDialog(false);

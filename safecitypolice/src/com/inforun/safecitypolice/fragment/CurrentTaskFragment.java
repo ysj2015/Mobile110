@@ -132,8 +132,8 @@ public class CurrentTaskFragment extends ParentFragment implements
 			startActivityForResult(in,200);
 			break;
 		case R.id.navi:
-			in.putExtra("lat", 31.186236);
-			in.putExtra("lng", 121.43782);
+			in.putExtra("lat", alarmLat);
+			in.putExtra("lng", alarmLng);
 			in.setClass(getActivity(), RouteActivity.class);
 			getActivity().startActivity(in);
 			break;

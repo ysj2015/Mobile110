@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.inforun.safecitypolice"
     android:versionCode="1"
-    android:versionName="1.3.1" xmlns:tools="http://schemas.android.com/tools">
+    android:versionName="1.3.4" xmlns:tools="http://schemas.android.com/tools">
 
     <uses-sdk
         android:minSdkVersion="14"
@@ -237,10 +237,6 @@
 
         <activity
             android:screenOrientation="portrait"
-            android:name="com.inforun.safecitypolice.activity.TaskActivity"
-            />
-        <activity
-            android:screenOrientation="portrait"
             android:name="com.inforun.safecitypolice.activity.DatumActivity"/>
         <activity
             android:screenOrientation="portrait"
@@ -258,18 +254,8 @@
         <activity
             android:screenOrientation="portrait"
             android:name="com.inforun.safecitypolice.activity.AlarmUserInfoActivity"/>
-        <activity
-            android:screenOrientation="portrait"
-            android:name="com.inforun.safecitypolice.other.NotificationHint"
-            android:theme="@style/MyDialogStyle" />
-        <activity 
-            android:screenOrientation="portrait"
-            android:name="com.inforun.safecitypolice.other.ImagePagerActivity" 
-            android:theme="@style/AppThemeNoActionBar"/>
-        <activity
-            android:screenOrientation="portrait"
-            android:name="com.inforun.safecitypolice.activity.TaskDetailActivity" 
-            />
+        
+        
         <activity
             android:name="com.inforun.safecitypolice.activity.VideoPlayActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
@@ -278,10 +264,7 @@
             android:name="com.inforun.safecitypolice.activity.AlarmPictureActivity"
             android:screenOrientation="portrait"
             ></activity>
-        <activity
-            android:screenOrientation="portrait"
-            android:name="com.inforun.safecitypolice.activity.TaskInfoActivity"
-            />
+        
         <activity 
             android:screenOrientation="portrait"
             android:name="com.inforun.safecitypolice.activity.RouteActivity">           

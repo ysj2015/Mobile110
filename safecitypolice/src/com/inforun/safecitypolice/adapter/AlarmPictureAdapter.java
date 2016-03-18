@@ -73,6 +73,7 @@ public class AlarmPictureAdapter extends BaseAdapter {
         	@Override
         	public void onLoadingStarted(String imageUri, View view){
         		super.onLoadingStarted(imageUri, view);
+        		image.setImageResource(R.drawable.loading);
         		//image.setBackgroundColor(0x000000);
         	}
         	@Override

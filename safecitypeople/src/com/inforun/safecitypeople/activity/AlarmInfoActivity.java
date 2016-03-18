@@ -230,7 +230,6 @@ public class AlarmInfoActivity extends BaseActivity implements OnClickListener,B
 				data.put("text", "[" + alarm_type + "]" 
 						+ alarmText.getText().toString().trim());
 			}
-			longitude=longitude-0.04;
 			data.put("coordStr", longitude+" "+latitude);
 			int length = fileList.size();
 			System.out.println("--------1");

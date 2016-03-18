@@ -48,7 +48,6 @@ import com.inforun.safecitypolice.entity.AlarmInfo;
 import com.inforun.safecitypolice.entity.Police;
 import com.inforun.safecitypolice.entity.Task;
 import com.inforun.safecitypolice.finals.Constants;
-import com.inforun.safecitypolice.other.ImagePagerActivity;
 import com.inforun.safecitypolice.request.AsyncHttpManager;
 import com.inforun.safecitypolice.request.XRequestListener;
 import com.inforun.safecitypolice.request.XRequestManager;

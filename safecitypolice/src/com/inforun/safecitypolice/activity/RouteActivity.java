@@ -166,7 +166,7 @@ public class RouteActivity extends BaseActivity
 		if(isFirstLoc) {
 			startPoint = new LatLng(latitude, longitude);
 			Log.v("location",latitude + " " + longitude);
-			endPoint = new LatLng(alarmLat, alarmLng+0.1);
+			endPoint = new LatLng(alarmLat, alarmLng);
 			Log.v("location",alarmLat + " " + alarmLng);
 			PlanNode stNode = PlanNode.withLocation(startPoint);
 			PlanNode enNode = PlanNode.withLocation(endPoint);

@@ -15,7 +15,6 @@ import cn.jpush.android.api.JPushInterface;
 import com.google.gson.Gson;
 import com.inforun.safecitypolice.activity.LoginActivity;
 import com.inforun.safecitypolice.activity.MainActivity;
-import com.inforun.safecitypolice.activity.TaskInfoActivity;
 import com.inforun.safecitypolice.entity.PaiJingInfo;
 import com.lidroid.xutils.util.LogUtils;
 
@@ -48,7 +47,7 @@ public class JpushReceiver extends BroadcastReceiver {
         	
         } else if (JPushInterface.ACTION_NOTIFICATION_OPENED.equals(intent.getAction())) {
             Log.d(TAG, "[MyReceiver] 用户点击打开了通知");
-            Intent i = new Intent(context, LoginActivity.class);
+            Intent i = new Intent(context, MainActivity.class);
             i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP );
         	context.startActivity(i);
             
