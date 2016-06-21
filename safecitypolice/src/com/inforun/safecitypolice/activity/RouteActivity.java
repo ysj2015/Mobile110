@@ -14,6 +14,7 @@ import com.baidu.mapapi.map.MyLocationConfiguration.LocationMode;
 import com.baidu.mapapi.model.LatLng;
 import com.baidu.mapapi.search.core.RouteLine;
 import com.baidu.mapapi.search.core.SearchResult;
+import com.baidu.mapapi.search.route.BikingRouteResult;
 import com.baidu.mapapi.search.route.DrivingRouteLine;
 import com.baidu.mapapi.search.route.DrivingRoutePlanOption;
 import com.baidu.mapapi.search.route.DrivingRouteResult;
@@ -24,13 +25,6 @@ import com.baidu.mapapi.search.route.TransitRouteResult;
 import com.baidu.mapapi.search.route.WalkingRouteLine;
 import com.baidu.mapapi.search.route.WalkingRoutePlanOption;
 import com.baidu.mapapi.search.route.WalkingRouteResult;
-import com.baidu.navisdk.adapter.BNOuterTTSPlayerCallback;
-import com.baidu.navisdk.adapter.BNRoutePlanNode;
-import com.baidu.navisdk.adapter.BNRoutePlanNode.CoordinateType;
-import com.baidu.navisdk.adapter.BaiduNaviManager;
-import com.baidu.navisdk.adapter.BaiduNaviManager.NaviInitListener;
-import com.baidu.navisdk.adapter.BaiduNaviManager.RoutePlanListener;
-import com.baidu.navisdk.adapter.BaiduNaviManager.RoutePlanPreference;
 import com.inforun.safecitypolice.R;
 
 import android.app.Activity;
@@ -276,6 +270,11 @@ public class RouteActivity extends BaseActivity
 //			break;
 
 		}
+	}
+	@Override
+	public void onGetBikingRouteResult(BikingRouteResult arg0) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

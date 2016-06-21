@@ -1,6 +1,10 @@
 package com.inforun.safecitypolice.utils;
 
+import com.inforun.safecitypolice.LogUtil;
+import com.inforun.safecitypolice.R;
+
 import android.app.AlarmManager;
+import android.app.Notification;
 import android.app.PendingIntent;
 import android.app.Service;
 import android.content.Intent;
@@ -11,14 +15,16 @@ public class WtService extends Service{
 
 	@Override
 	public void onCreate() {
-		System.out.println("wt onCreate方法数据");
 		Intent in = new Intent("CheckLocationStreamReceiver");
 		PendingIntent pi = PendingIntent.getBroadcast(this, 0, in, 0);
 		AlarmManager am = (AlarmManager) getSystemService(ALARM_SERVICE);
 		am.setRepeating(AlarmManager.RTC_WAKEUP, System.currentTimeMillis(),
 				30 * 1000, pi);
-//		startForeground(10, null);
+		LogUtil.write("WtService onCreate()"+"\n");
+		
+		//startForeground(10, null);
 		super.onCreate();
+		
 	}
 	@Override
 	public IBinder onBind(Intent arg0) {
@@ -33,8 +39,10 @@ public class WtService extends Service{
 		am.setRepeating(AlarmManager.RTC_WAKEUP, System.currentTimeMillis(),
 				30 * 1000, pi);
 		System.out.println("wt onStartCommand方法数据");
-		flags = START_STICKY;
-		return super.onStartCommand(intent, flags, startId);
+		LogUtil.write("WtService onStartCommand()"+"\n");
+//		flags = START_STICKY;
+//		return super.onStartCommand(intent, flags, startId);
+		return START_STICKY;
 	}
 
 	@Override
@@ -44,6 +52,7 @@ public class WtService extends Service{
 		Intent intent = new Intent("com.inforun.safecitypolice.utils.WtBroadcastReceiver");
 		intent.addCategory("com.inforun.safecitypolice.utils.WtBroadcastReceiver");
 		sendBroadcast(intent);
+		LogUtil.write("WtService onDestroy()"+"\n");
 		System.out.println("wt onDestroy方法数据");
 		super.onDestroy();
 	}

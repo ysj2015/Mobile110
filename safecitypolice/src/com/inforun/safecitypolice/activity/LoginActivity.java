@@ -8,6 +8,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.Environment;
 import android.os.Handler;
 import android.preference.PreferenceManager;
 import android.view.View;
@@ -20,6 +21,7 @@ import android.widget.Toast;
 
 import com.inforun.safecitypolice.BaseActivity;
 import com.inforun.safecitypolice.LocationService;
+import com.inforun.safecitypolice.LogUtil;
 import com.inforun.safecitypolice.MyApplication;
 import com.inforun.safecitypolice.R;
 import com.inforun.safecitypolice.SessionManager;
@@ -39,6 +41,7 @@ import com.loopj.android.http.JsonHttpResponseHandler;
 import com.loopj.android.http.PersistentCookieStore;
 import com.loopj.android.http.RequestParams;
 
+import java.util.Date;
 import java.util.HashMap;
 
 import org.json.JSONObject;
@@ -189,6 +192,10 @@ public class LoginActivity extends BaseActivity implements OnClickListener {
 						SessionManager.getInstance().setCookieStore(myCookieStore);
 						startActivity(new Intent(LoginActivity.this,MainActivity.class));
 						//startCheckLocationStream();
+						
+						long t = new Date().getTime()/1000;
+						String logPath = Environment.getExternalStorageDirectory().getPath()+"/"+ t + ".txt";
+						LogUtil.setFile(logPath);
 						Intent service = new Intent(LoginActivity.this, WtService.class);
 						startService(service);
 						finish();

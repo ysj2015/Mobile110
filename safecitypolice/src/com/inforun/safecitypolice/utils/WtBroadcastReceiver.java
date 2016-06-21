@@ -1,5 +1,7 @@
 package com.inforun.safecitypolice.utils;
 
+import com.inforun.safecitypolice.LogUtil;
+
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -9,6 +11,7 @@ public class WtBroadcastReceiver extends BroadcastReceiver {
 
 	@Override
 	public void onReceive(Context context, Intent intent) {
+		LogUtil.write("WtBroadcastReceiver start WtService\n");
 		msIntent = new Intent(context, WtService.class);
 		context.startService(msIntent);
 	}

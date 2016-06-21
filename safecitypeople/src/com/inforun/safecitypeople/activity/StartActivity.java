@@ -1,5 +1,7 @@
 package com.inforun.safecitypeople.activity;
 
+import java.io.File;
+
 import org.json.JSONObject;
 
 import com.inforun.safecitypeople.App;
@@ -17,6 +19,7 @@ import android.app.PendingIntent;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.Environment;
 import android.preference.PreferenceManager;
 import android.view.Window;
 
@@ -31,8 +34,13 @@ public class StartActivity extends Activity {
 		setContentView(R.layout.activity_start);
 		System.out.println("start");
         autoLogin();
-		
-		
+		File[] lst = Environment.getExternalStorageDirectory().listFiles();
+		for(int i = 0;i < lst.length; i ++) {
+			if(lst[i].getAbsolutePath().contains("crashserror")&&lst[i].isFile()){
+				System.out.println(lst[i].getAbsolutePath());
+				lst[i].delete();
+			}
+		}
 	}
 	private void autoLogin() {
 		preferences = PreferenceManager.getDefaultSharedPreferences(this);

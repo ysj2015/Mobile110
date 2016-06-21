@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.inforun.safecitypolice"
     android:versionCode="1"
-    android:versionName="1.3.4" xmlns:tools="http://schemas.android.com/tools">
+    android:versionName="1.3.7" xmlns:tools="http://schemas.android.com/tools">
 
     <uses-sdk
         android:minSdkVersion="14"
@@ -300,11 +300,18 @@
         	    <category android:name="android.intent.category.DEFAULT" />
         	</intent-filter>
         </service>
-        <service 
-            
-            android:name="com.inforun.safecitypolice.utils.WtService" android:enabled="true"></service>
+        <service            
+            android:name="com.inforun.safecitypolice.utils.WtService"
+			android:enabled="true"
+			android:process=":remote">
+            <intent-filter android:priority="1000">
+                <action android:name="com.inforun.safecitypolice.utils.WtService" />
+
+                <category android:name="com.inforun.safecitypolice" />
+            </intent-filter>
+        </service>
         <receiver android:name="com.inforun.safecitypolice.utils.WtBroadcastReceiver" tools:ignore="ExportedReceiver">
-            <intent-filter android:priority="1003">
+            <intent-filter android:priority="1000">
                 <action android:name="com.inforun.safecitypolice.utils.WtBroadcastReceiver"/>
                 <category android:name="com.inforun.safecitypolice.utils.WtBroadcastReceiver"/>
             </intent-filter>

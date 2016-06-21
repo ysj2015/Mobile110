@@ -12,8 +12,11 @@ import com.inforun.safecitypolice.request.XResponse;
 import com.lidroid.xutils.exception.HttpException;
 
 import android.app.Activity;
+import android.app.AlarmManager;
 import android.app.AlertDialog;
 import android.app.Dialog;
+import android.app.PendingIntent;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -105,6 +108,11 @@ public class SettingActivity extends BaseActivity implements OnClickListener{
 				        editor = preferences.edit();
 				        editor.clear();
 				        editor.commit();
+
+				        AlarmManager alarmMgr = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
+				        Intent intent = new Intent("CheckLocationStreamReceiver");
+				        PendingIntent pendIntent = PendingIntent.getBroadcast(SettingActivity.this, 0, intent, 0);
+				        alarmMgr.cancel(pendIntent);
 				        //editor.
 						((MyApplication) SettingActivity.this.getApplication()).exit();
 					}
